@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GeneralEC.iml" filepath="$PROJECT_DIR$/GeneralEC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqh-annotations/jqh-annotations.iml" filepath="$PROJECT_DIR$/jqh-annotations/jqh-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqh-compiler/jqh-compiler.iml" filepath="$PROJECT_DIR$/jqh-compiler/jqh-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqh-core/jqh-core.iml" filepath="$PROJECT_DIR$/jqh-core/jqh-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqh-ec/jqh-ec.iml" filepath="$PROJECT_DIR$/jqh-ec/jqh-ec.iml" />
+    </modules>
+  </component>
+</project>
