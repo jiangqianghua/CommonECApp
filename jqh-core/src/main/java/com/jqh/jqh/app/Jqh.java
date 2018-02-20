@@ -18,4 +18,9 @@ public final class Jqh {
     public static WeakHashMap<String,Object> getConfiguration(){
         return Configuration.getInstance().getJqhConfigs();
     }
+
+
+    public static Context getApplicationContext(){
+        return (Context) getConfiguration().get(ConfigType.APPLICATION_CONTEXT.name());
+    }
 }

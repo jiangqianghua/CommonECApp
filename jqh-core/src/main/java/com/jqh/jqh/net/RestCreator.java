@@ -3,6 +3,7 @@ package com.jqh.jqh.net;
 import com.jqh.jqh.app.ConfigType;
 import com.jqh.jqh.app.Jqh;
 
+import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -17,6 +18,11 @@ public class RestCreator {
 
     public static RestService getRestService(){
         return RestServiceHolder.REST_SERVICE ;
+    }
+
+    private static final class RestServiceHolder{
+        private static final RestService REST_SERVICE =
+                RetrofitHolder.RETROFIT_CLIENT.create(RestService.class);
     }
 
     private static final class RetrofitHolder{
@@ -37,8 +43,12 @@ public class RestCreator {
                 .build();
     }
 
-    private static final class RestServiceHolder{
-        private static final RestService REST_SERVICE =
-                RetrofitHolder.RETROFIT_CLIENT.create(RestService.class);
+
+    public static WeakHashMap<String,Object> getParams(){
+        return ParamsHolder.PARAMS ;
+    }
+
+    private static final class ParamsHolder{
+        private static final WeakHashMap<String,Object> PARAMS = new WeakHashMap<>();
     }
 }
