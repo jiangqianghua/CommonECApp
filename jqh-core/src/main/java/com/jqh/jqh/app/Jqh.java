@@ -19,6 +19,9 @@ public final class Jqh {
         return Configuration.getInstance().getJqhConfigs();
     }
 
+    public static Object getConfiguration(String key){
+        return Configuration.getInstance().getJqhConfigs().get(key);
+    }
 
     public static Context getApplicationContext(){
         return (Context) getConfiguration().get(ConfigType.APPLICATION_CONTEXT.name());

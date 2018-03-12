@@ -1,6 +1,9 @@
 package com.jqh.jqh.app;
 
+import java.util.ArrayList;
 import java.util.WeakHashMap;
+
+import okhttp3.Interceptor;
 
 /**
  * Created by jiangqianghua on 18/2/15.
@@ -9,6 +12,9 @@ import java.util.WeakHashMap;
 public class Configuration {
 
     private static final WeakHashMap<String,Object> JQH_CONFIGS = new WeakHashMap<>();
+    private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
+
+
     private Configuration(){
         JQH_CONFIGS.put(ConfigType.CONFIG_READY.name(),false);
     }
@@ -30,6 +36,18 @@ public class Configuration {
     public final Configuration withApiHost(String host){
         JQH_CONFIGS.put(ConfigType.API_HOST.name(),host);
         return this ;
+    }
+
+    public final Configuration widthInterceptor(Interceptor interceptor){
+        INTERCEPTORS.add(interceptor);
+        JQH_CONFIGS.put(ConfigType.INTERCEPTOR.name(),INTERCEPTORS);
+        return this;
+    }
+
+    public final Configuration widthInterceptors(ArrayList<Interceptor> interceptors){
+        INTERCEPTORS.addAll(interceptors);
+        JQH_CONFIGS.put(ConfigType.INTERCEPTOR.name(),INTERCEPTORS);
+        return this;
     }
 
     private void checkConfiguration(){

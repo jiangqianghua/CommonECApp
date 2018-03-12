@@ -8,6 +8,7 @@ import com.jqh.jqh.net.calback.IRequest;
 import com.jqh.jqh.net.calback.ISuccess;
 import com.jqh.jqh.ui.LoaderStyle;
 
+import java.io.File;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -36,6 +37,14 @@ public class RestClientBuilder {
     private LoaderStyle loaderStyle ;
 
     private Context context;
+
+    private File mFile ;
+
+    private  String mDownoad_dir ;
+
+    private  String mExtenion ;
+
+    private  String mName;
 
     public RestClientBuilder(){
 
@@ -67,6 +76,7 @@ public class RestClientBuilder {
         return this;
     }
 
+
     public final RestClientBuilder failure(IFailure iFailure){
         this.mIFailure = iFailure ;
         return this;
@@ -74,6 +84,16 @@ public class RestClientBuilder {
 
     public final RestClientBuilder error(IError iError){
         this.mIError = iError ;
+        return this;
+    }
+
+    public final RestClientBuilder file(File file){
+        this.mFile = file ;
+        return this;
+    }
+
+    public final RestClientBuilder file(String file){
+        this.mFile = new File(file) ;
         return this;
     }
 
@@ -94,8 +114,23 @@ public class RestClientBuilder {
         return this ;
     }
 
+    public final RestClientBuilder dir(String dir){
+        this.mDownoad_dir = dir ;
+        return this ;
+    }
+
+    public final RestClientBuilder extension(String extension){
+        this.mExtenion = extension ;
+        return this;
+    }
+
+    public final RestClientBuilder name(String name){
+        this.mName = name ;
+        return this ;
+    }
+
     public final RestClient build(){
-        return new RestClient(mUrl,PARAMS,mIRequest,mISuccess,mIError,mIFailure,mBody,context,loaderStyle);
+        return new RestClient(mUrl,PARAMS,mIRequest,mISuccess,mIError,mIFailure,mBody,context,loaderStyle,mFile,mDownoad_dir,mExtenion,mName);
     }
 
 }

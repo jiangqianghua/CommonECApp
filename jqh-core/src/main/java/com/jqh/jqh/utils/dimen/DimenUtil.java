@@ -1,4 +1,4 @@
-package com.jqh.jqh.utils;
+package com.jqh.jqh.utils.dimen;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
