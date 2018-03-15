@@ -9,6 +9,8 @@ import com.jqh.jqh.activites.ProxyActivity;
 import com.jqh.jqh.deletegates.JqhDelegate;
 import com.jqh.jqh.ec.launcher.LauncherDelegate;
 import com.jqh.jqh.ec.launcher.LauncherScrollDelegate;
+import com.jqh.jqh.ec.launcher.sign.SignInDelegate;
+import com.jqh.jqh.ec.launcher.sign.SignUpDelegate;
 
 public class ExampleActivity extends ProxyActivity {
 
@@ -23,6 +25,6 @@ public class ExampleActivity extends ProxyActivity {
 
     @Override
     public JqhDelegate setRootDelegate() {
-        return new LauncherDelegate();
+        return new SignInDelegate();
     }
 }
