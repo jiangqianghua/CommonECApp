@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 设置透明 -->
+        <activity android:name="com.diabin.fastec.example.wxapi.WXEntryActivity"
+            android:launchMode="singleTop"
+            android:exported="true"
+            android:label="微信回调"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent">
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </activity>
     </application>
 
 </manifest>

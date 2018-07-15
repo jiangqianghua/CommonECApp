@@ -15,5 +15,5 @@ public @interface AppRegisterGenerator {
 
     String packageName();
 
-    Class<?> registerTemplete();
+    Class<?> registerTemplate();
 }

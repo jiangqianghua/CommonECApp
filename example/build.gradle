@@ -25,4 +25,5 @@ dependencies {
     annotationProcessor project(':jqh-compiler')
     compile 'com.facebook.stetho:stetho:1.4.2'
     compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    compile project(':jqh-annotations')
 }

@@ -15,12 +15,20 @@ public final class Jqh {
         return Configuration.getInstance();
     }
 
+    public static Configuration getConfigurator(){
+        return Configuration.getInstance();
+    }
+
     public static WeakHashMap<String,Object> getConfiguration(){
         return Configuration.getInstance().getJqhConfigs();
     }
 
     public static Object getConfiguration(String key){
         return Configuration.getInstance().getJqhConfigs().get(key);
+    }
+
+    public static Object getConfiguration(ConfigType type){
+        return Configuration.getInstance().getJqhConfigs().get(type.name());
     }
 
     public static Context getApplicationContext(){

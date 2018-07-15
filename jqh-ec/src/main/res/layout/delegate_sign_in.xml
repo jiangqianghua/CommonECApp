@@ -91,6 +91,17 @@
                 android:text="还没有账户？现在注册吧"
                 android:textSize="16sp"
                 />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/icon_sign_in_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:text="微信登录"
+                android:textSize="16sp"
+                android:textColor="#00ff00"
+                />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

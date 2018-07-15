@@ -1,5 +1,7 @@
 package com.jqh.jqh.app;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.WeakHashMap;
 
@@ -47,6 +49,20 @@ public class Configuration {
     public final Configuration widthInterceptors(ArrayList<Interceptor> interceptors){
         INTERCEPTORS.addAll(interceptors);
         JQH_CONFIGS.put(ConfigType.INTERCEPTOR.name(),INTERCEPTORS);
+        return this;
+    }
+
+    public final Configuration widthWeChatAppId(String appid){
+        JQH_CONFIGS.put(ConfigType.WE_CHAT_APP_ID.name(),appid);
+        return this;
+    }
+
+    public final Configuration widthWeChatAppSecret(String secret){
+        JQH_CONFIGS.put(ConfigType.WE_CHAT_APP_SECRET.name(),secret);
+        return this;
+    }
+    public final Configuration widthActivity(Activity activity){
+        JQH_CONFIGS.put(ConfigType.ACTIVITY.name(),activity);
         return this;
     }
 

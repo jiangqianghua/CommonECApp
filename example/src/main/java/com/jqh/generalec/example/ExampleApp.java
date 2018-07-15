@@ -18,6 +18,8 @@ public class ExampleApp extends Application {
         Jqh.init(this)
                 .withApiHost("http://127.0.0.1")
                 .widthInterceptor(new DebugInterceptor("index",R.raw.signin))
+                .widthWeChatAppId("wx7d10f050b6bdbda3")
+                .widthWeChatAppSecret("222")
                 .configure();
         initSteeho();
         DataBaseManager.getInstance().init(this);

@@ -12,6 +12,8 @@ import com.jqh.jqh.deletegates.JqhDelegate;
 import com.jqh.jqh.ec.R;
 import com.jqh.jqh.net.RestClient;
 import com.jqh.jqh.net.calback.ISuccess;
+import com.jqh.jqh.wechat.JqhWeChat;
+import com.jqh.jqh.wechat.callbacks.IWeChatSigninCallBack;
 
 /**
  * Created by jiangqianghua on 18/3/15.
@@ -23,6 +25,7 @@ public class SignInDelegate extends JqhDelegate {
     private TextInputEditText mPassword;
     private AppCompatButton mSignInBtn;
     private AppCompatTextView mlinkSignUp;
+    private AppCompatTextView mWeixinSign ;
     private ISignListener mISignListener ;
 
     @Override
@@ -44,6 +47,7 @@ public class SignInDelegate extends JqhDelegate {
         mPassword = (TextInputEditText)rootView.findViewById(R.id.edit_sign_in_password);
         mSignInBtn = (AppCompatButton)rootView.findViewById(R.id.btn_sign_in);
         mlinkSignUp = (AppCompatTextView)rootView.findViewById(R.id.tv_link_sign_up);
+        mWeixinSign = (AppCompatTextView)rootView.findViewById(R.id.icon_sign_in_wechat);
         initEvent();
     }
 
@@ -70,6 +74,18 @@ public class SignInDelegate extends JqhDelegate {
             @Override
             public void onClick(View v) {
                 start(new SignUpDelegate());
+            }
+        });
+
+        mWeixinSign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                JqhWeChat.getInstance().onSignSuccess(new IWeChatSigninCallBack() {
+                    @Override
+                    public void onSignInSuccess(String userInfo) {
+
+                    }
+                }).signIn();
             }
         });
     }

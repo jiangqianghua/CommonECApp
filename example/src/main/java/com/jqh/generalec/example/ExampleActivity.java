@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.jqh.jqh.activites.ProxyActivity;
+import com.jqh.jqh.app.Jqh;
 import com.jqh.jqh.deletegates.JqhDelegate;
 import com.jqh.jqh.ec.launcher.LauncherDelegate;
 import com.jqh.jqh.ec.launcher.LauncherScrollDelegate;
@@ -26,6 +27,8 @@ public class ExampleActivity extends ProxyActivity implements ISignListener,
         if(actionBar != null){
             actionBar.hide();
         }
+        // 设置全局的activity到配置中
+        Jqh.getConfigurator().widthActivity(this);
     }
 
     @Override

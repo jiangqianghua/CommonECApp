@@ -14,5 +14,5 @@ public @interface EntryGenerator {
 
     String packageName();
 
-    Class<?> entryTemplete();
+    Class<?> entryTemplate();
 }
