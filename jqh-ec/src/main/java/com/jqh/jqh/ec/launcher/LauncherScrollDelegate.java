@@ -6,10 +6,14 @@ import android.view.View;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.listener.OnItemClickListener;
+import com.jqh.jqh.app.AccountManager;
+import com.jqh.jqh.app.IUserChecker;
 import com.jqh.jqh.app.Jqh;
 import com.jqh.jqh.deletegates.JqhDelegate;
 import com.jqh.jqh.ec.R;
+import com.jqh.jqh.ui.launcher.ILauncherListener;
 import com.jqh.jqh.ui.launcher.LauncherHolderCreator;
+import com.jqh.jqh.ui.launcher.OnLauncherFinishTag;
 import com.jqh.jqh.ui.launcher.ScrollLaucherTag;
 import com.jqh.jqh.utils.storage.JqhPreference;
 
@@ -21,6 +25,7 @@ import java.util.ArrayList;
 
 public class LauncherScrollDelegate extends JqhDelegate implements OnItemClickListener {
     private ConvenientBanner<Integer> mConvenientBanner = null ;
+    private ILauncherListener mILauncherListener ;
     private static final ArrayList<Integer> INTEGERS = new ArrayList<>();
 
     private void initBanner(){
@@ -51,6 +56,22 @@ public class LauncherScrollDelegate extends JqhDelegate implements OnItemClickLi
         if(position == INTEGERS.size() - 1){
             JqhPreference.setAppFlag(ScrollLaucherTag.HAS_FIRST_LAUNCHER_APP.name(),true);
             //检查是否已经登录
+            // 检查是否登录app
+            AccountManager.checkAccount(new IUserChecker() {
+                @Override
+                public void onSignIn() {
+                    if(mILauncherListener != null){
+                        mILauncherListener.onLauncherFinish(OnLauncherFinishTag.SIGNED);
+                    }
+                }
+
+                @Override
+                public void noNotSignIn() {
+                    if(mILauncherListener != null){
+                        mILauncherListener.onLauncherFinish(OnLauncherFinishTag.NOT_SIGNED);
+                    }
+                }
+            });
         }
 
     }

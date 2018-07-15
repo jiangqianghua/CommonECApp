@@ -1,0 +1,11 @@
+{
+  "code":0,
+  "message":"ok",
+  "data":{
+    "userId":1,
+    "name":"hudan",
+    "avater":"http://www.baidu.com",
+    "gender":"male",
+    "address":"china"
+  }
+}

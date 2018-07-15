@@ -1,5 +1,6 @@
 package com.jqh.jqh.ec.launcher.sign;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TextInputEditText;
@@ -22,6 +23,16 @@ public class SignInDelegate extends JqhDelegate {
     private TextInputEditText mPassword;
     private AppCompatButton mSignInBtn;
     private AppCompatTextView mlinkSignUp;
+    private ISignListener mISignListener ;
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        if(activity instanceof ISignListener){
+            mISignListener = (ISignListener)activity;
+        }
+    }
+
     @Override
     public Object setLayout() {
         return R.layout.delegate_sign_in;
@@ -41,15 +52,16 @@ public class SignInDelegate extends JqhDelegate {
             @Override
             public void onClick(View v) {
                 if(checkForm()){
-//                    RestClient.builder().url("sign_in")
-//                            .params("","")
-//                            .success(new ISuccess() {
-//                                @Override
-//                                public void onSuccess(String response) {
-//
-//                                }
-//                            }).build()
-//                            .post();
+                    RestClient.builder().url("http://127.0.0.1/index")
+                            .params("email",mEmail.getText().toString())
+                            .params("password",mPassword.getText().toString())
+                            .success(new ISuccess() {
+                                @Override
+                                public void onSuccess(String response) {
+                                    SignHandler.signIn(response,null);
+                                }
+                            }).build()
+                            .post();
                 }
             }
         });
