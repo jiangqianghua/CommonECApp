@@ -14,6 +14,7 @@ import com.jqh.jqh.ec.launcher.LauncherScrollDelegate;
 import com.jqh.jqh.ec.launcher.sign.ISignListener;
 import com.jqh.jqh.ec.launcher.sign.SignInDelegate;
 import com.jqh.jqh.ec.launcher.sign.SignUpDelegate;
+import com.jqh.jqh.ec.main.EcBottomDelegate;
 import com.jqh.jqh.ui.launcher.ILauncherListener;
 import com.jqh.jqh.ui.launcher.OnLauncherFinishTag;
 
@@ -55,8 +56,9 @@ public class ExampleActivity extends ProxyActivity implements ISignListener,
     public void onLauncherFinish(OnLauncherFinishTag tag) {
         switch (tag){
             case SIGNED:
-                Toast.makeText(this,"用户登录拉",Toast.LENGTH_SHORT).show();
-                startWithPop(new ExampleDelegate());
+                                                                                                                                                                                                                                                                                                                                                                                                             Toast.makeText(this,"用户登录拉",Toast.LENGTH_SHORT).show();
+              //  startWithPop(new ExampleDelegate());
+                startWithPop(new EcBottomDelegate());
                 break;
             case NOT_SIGNED:
                 Toast.makeText(this,"用户没登录",Toast.LENGTH_SHORT).show();

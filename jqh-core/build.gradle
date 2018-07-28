@@ -65,4 +65,8 @@ dependencies {
 
     // 包含统计
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+
+    //字体图标
+    compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
 }
