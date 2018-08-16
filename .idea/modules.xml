@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GeneralEC.iml" filepath="$PROJECT_DIR$/GeneralEC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CommonECApp.iml" filepath="$PROJECT_DIR$/CommonECApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/jqh-annotations/jqh-annotations.iml" filepath="$PROJECT_DIR$/jqh-annotations/jqh-annotations.iml" />
       <module fileurl="file://$PROJECT_DIR$/jqh-compiler/jqh-compiler.iml" filepath="$PROJECT_DIR$/jqh-compiler/jqh-compiler.iml" />

@@ -1,6 +1,7 @@
 package com.jqh.jqh.app;
 
 import android.content.Context;
+import android.os.Handler;
 
 import java.util.WeakHashMap;
 
@@ -33,5 +34,9 @@ public final class Jqh {
 
     public static Context getApplicationContext(){
         return (Context) getConfiguration().get(ConfigType.APPLICATION_CONTEXT.name());
+    }
+
+    public static Handler getHandler() {
+        return (Handler) getConfiguration(ConfigType.HANDLER);
     }
 }

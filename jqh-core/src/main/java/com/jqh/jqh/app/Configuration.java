@@ -1,6 +1,7 @@
 package com.jqh.jqh.app;
 
 import android.app.Activity;
+import android.os.Handler;
 
 import java.util.ArrayList;
 import java.util.WeakHashMap;
@@ -15,10 +16,11 @@ public class Configuration {
 
     private static final WeakHashMap<String,Object> JQH_CONFIGS = new WeakHashMap<>();
     private static final ArrayList<Interceptor> INTERCEPTORS = new ArrayList<>();
-
+    private static final Handler HANDLER = new Handler();
 
     private Configuration(){
         JQH_CONFIGS.put(ConfigType.CONFIG_READY.name(),false);
+        JQH_CONFIGS.put(ConfigType.HANDLER.name(),HANDLER);
     }
 
     public static Configuration getInstance(){

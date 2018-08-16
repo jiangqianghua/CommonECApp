@@ -54,6 +54,7 @@ dependencies {
 
     compile 'com.bigkoo:convenientbanner:2.0.5'
     compile 'com.alibaba:fastjson:1.2.31'
+   // compile 'com.alibaba:fastjson:1.1.57.android'
 
     compile 'com.android.support:design:25.1.1'
     //Log
@@ -69,4 +70,6 @@ dependencies {
     //字体图标
     compile 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
     compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2'
+    // recyclerAdapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }
