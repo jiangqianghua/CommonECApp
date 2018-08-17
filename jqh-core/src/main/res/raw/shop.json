@@ -1,52 +1,108 @@
 {
   "code":0,
   "message":"ok",
-  "total":100,
+  "total":17,
   "page_size":6,
   "data":[
     {
       "goodsId":0,
       "spanSize":4,
       "banners":[
-        "",
-        "",
-        ""
+        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534534359377&di=6095c80ca2b83cdfbd244454cde643b8&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01d28758e0a9e4a801219c77a340f4.jpg%401280w_1l_2o_100sh.jpg",
+        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534534359393&di=53fe2ed817487a371b56fa102b7089e1&imgtype=0&src=http%3A%2F%2Fpic23.nipic.com%2F20120805%2F10665405_101511605116_2.jpg",
+        "https://m.360buyimg.com/babel/jfs/t24025/163/2082673903/91791/29f19fc7/5b7271a4N54fe4d9c.jpg"
       ]
     },
     {
       "goodsId":1,
-      "text":"测试描述1",
-      "imageUrl":"",
-      "spanSize":4
+      "text":"鞋子",
+      "imageUrl":"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2031330930,1299798005&fm=27&gp=0.jpg",
+      "spanSize":2
     },
     {
       "goodsId":2,
-      "text":"测试描述2",
-      "imageUrl":"",
-      "spanSize":4
+      "text":"连衣裙",
+      "imageUrl":"https://img14.360buyimg.com/n1/jfs/t16687/65/1704815130/438948/2d79dff7/5ad6ffe8Na7474363.jpg",
+      "spanSize":2
     },
     {
       "goodsId":3,
-      "text":"测试描述3",
-      "imageUrl":"",
+      "text":"手表",
+      "imageUrl":"https://img10.360buyimg.com/mobilecms/s250x250_jfs/t24508/128/547300062/111657/a5a7dc48/5b34807bN1caac724.jpg",
       "spanSize":4
     },
     {
       "goodsId":4,
-      "text":"测试描述4",
-      "imageUrl":"",
-      "spanSize":2
+      "text":"手机",
+      "imageUrl":"https://img30.360buyimg.com/babel/s350x370_jfs/t21838/316/1878229952/81113/98439a1c/5b3d9672Ne2b3d5e2.png!q90!cc_350x370",
+      "spanSize":4
     },
     {
       "goodsId":5,
-      "text":"测试描述5",
-      "imageUrl":"",
+      "text":"包包",
+      "imageUrl":"https://img10.360buyimg.com/babel/s350x250_jfs/t24169/36/1990167241/61960/61b8886/5b7298bfN3153c507.jpg!q90!cc_350x250.webp",
       "spanSize":2
     },
     {
       "goodsId":6,
-      "imageUrl":"",
+      "imageUrl":"https://m.360buyimg.com/babel/jfs/t24550/363/2123473973/92855/1af9842e/5b73e202N2c142127.jpg",
       "spanSize":2
+    },
+    {
+      "goodsId":7,
+      "imageUrl":"https://m.360buyimg.com/babel/jfs/t7453/318/3171930369/78151/ea3143e9/5b756f61Nd0d6989b.jpg",
+      "spanSize":2
+    },
+    {
+      "goodsId":8,
+      "text":"我是单纯的文字广告",
+      "spanSize":4
+    },
+    {
+      "goodsId":9,
+      "text":"鞋子",
+      "imageUrl":"https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2031330930,1299798005&fm=27&gp=0.jpg",
+      "spanSize":2
+    },
+    {
+      "goodsId":10,
+      "text":"连衣裙",
+      "imageUrl":"https://img14.360buyimg.com/n1/jfs/t16687/65/1704815130/438948/2d79dff7/5ad6ffe8Na7474363.jpg",
+      "spanSize":2
+    },
+    {
+      "goodsId":11,
+      "text":"手表",
+      "imageUrl":"https://img10.360buyimg.com/mobilecms/s250x250_jfs/t24508/128/547300062/111657/a5a7dc48/5b34807bN1caac724.jpg",
+      "spanSize":4
+    },
+    {
+      "goodsId":12,
+      "text":"手机",
+      "imageUrl":"https://img30.360buyimg.com/babel/s350x370_jfs/t21838/316/1878229952/81113/98439a1c/5b3d9672Ne2b3d5e2.png!q90!cc_350x370",
+      "spanSize":4
+    },
+    {
+      "goodsId":13,
+      "text":"包包",
+      "imageUrl":"https://img10.360buyimg.com/babel/s350x250_jfs/t24169/36/1990167241/61960/61b8886/5b7298bfN3153c507.jpg!q90!cc_350x250.webp",
+      "spanSize":2
+    },
+    {
+      "goodsId":14,
+      "imageUrl":"https://m.360buyimg.com/babel/jfs/t7453/318/3171930369/78151/ea3143e9/5b756f61Nd0d6989b.jpg",
+      "spanSize":2
+    },
+    {
+      "goodsId":15,
+      "imageUrl":"https://m.360buyimg.com/babel/jfs/t7453/318/3171930369/78151/ea3143e9/5b756f61Nd0d6989b.jpg",
+      "spanSize":2
+    },
+    {
+      "goodsId":16,
+      "text":"我是单纯的文字广告",
+      "spanSize":4
     }
+
   ]
 }

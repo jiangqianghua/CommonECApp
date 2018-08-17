@@ -18,6 +18,8 @@ import com.jqh.jqh.ec.main.EcBottomDelegate;
 import com.jqh.jqh.ui.launcher.ILauncherListener;
 import com.jqh.jqh.ui.launcher.OnLauncherFinishTag;
 
+import qiu.niorgai.StatusBarCompat;
+
 public class ExampleActivity extends ProxyActivity implements ISignListener,
         ILauncherListener{
 
@@ -30,6 +32,7 @@ public class ExampleActivity extends ProxyActivity implements ISignListener,
         }
         // 设置全局的activity到配置中
         Jqh.getConfigurator().widthActivity(this);
+        StatusBarCompat.translucentStatusBar(this,true);
     }
 
     @Override

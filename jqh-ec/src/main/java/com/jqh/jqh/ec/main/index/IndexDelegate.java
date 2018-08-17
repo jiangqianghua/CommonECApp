@@ -2,8 +2,10 @@ package com.jqh.jqh.ec.main.index;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.AppCompatEditText;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -12,8 +14,10 @@ import android.widget.Toast;
 import com.joanzapata.iconify.widget.IconTextView;
 import com.jqh.jqh.bottom.BottomItemDelegate;
 import com.jqh.jqh.ec.R;
+import com.jqh.jqh.ec.main.EcBottomDelegate;
 import com.jqh.jqh.net.RestClient;
 import com.jqh.jqh.net.calback.ISuccess;
+import com.jqh.jqh.ui.recycler.BaseDecoration;
 import com.jqh.jqh.ui.recycler.MultipleFields;
 import com.jqh.jqh.ui.recycler.MultipleItemEntity;
 import com.jqh.jqh.ui.refresh.RefreshHandler;
@@ -48,30 +52,31 @@ public class IndexDelegate extends BottomItemDelegate {
         mSearchView = (AppCompatEditText)rootView.findViewById(R.id.et_search_view);
         mMessageView = (IconTextView)rootView.findViewById(R.id.icon_index_message);
 
-        refreshHandler = new RefreshHandler(mSwipeRefreshLayout);
+        refreshHandler = RefreshHandler.create(mSwipeRefreshLayout,mRecyclerView,new IndexDataConverter());
 
-        RestClient.builder()
-                .url("http://127.0.0.1/shops")
-                .success(new ISuccess() {
-                    @Override
-                    public void onSuccess(String response) {
-                        //  Log.d("RefreshHandler","firstPage:"+response);
-                        final IndexDataConverter converter = new IndexDataConverter();
-                        converter.setJsonData(response);
-                        final ArrayList<MultipleItemEntity> list = converter.convert();
-                        final String imageUrl = list.get(1).getField(MultipleFields.IMAGE_URL);
-                        Toast.makeText(getContext(),imageUrl,Toast.LENGTH_LONG).show();
-                    }
-                })
-                .build()
-                .get();
+//        RestClient.builder()
+//                .url("http://127.0.0.1/shops")
+//                .success(new ISuccess() {
+//                    @Override
+//                    public void onSuccess(String response) {
+//                        //  Log.d("RefreshHandler","firstPage:"+response);
+//                        final IndexDataConverter converter = new IndexDataConverter();
+//                        converter.setJsonData(response);
+//                        final ArrayList<MultipleItemEntity> list = converter.convert();
+//                        final String imageUrl = list.get(1).getField(MultipleFields.IMAGE_URL);
+//                        Toast.makeText(getContext(),imageUrl,Toast.LENGTH_LONG).show();
+//                    }
+//                })
+//                .build()
+//                .get();
+
     }
 
     @Override
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
         initRefreshLayout();
-
+        initRecyclerView();
         refreshHandler.firstPage("http://127.0.0.1/shops");
     }
 
@@ -83,6 +88,18 @@ public class IndexDelegate extends BottomItemDelegate {
         mSwipeRefreshLayout.setColorSchemeResources(R.color.holo_blue_bright,R.color.holo_orange_light,R.color.holo_red_light);
         // 设置转圈的位置，true是从大到小，120是开始位置，300的结束位置
         mSwipeRefreshLayout.setProgressViewOffset(true,120,300);
+    }
+
+    private void initRecyclerView(){
+        final GridLayoutManager manager = new GridLayoutManager(getContext(),4);
+        mRecyclerView.setLayoutManager(manager);
+        mRecyclerView.addItemDecoration(BaseDecoration.create(ContextCompat.getColor(getContext(),R.color.app_backgroud),
+                5));
+
+        // 获取父亲元素
+        final EcBottomDelegate ecBottomDelegate = getParentDelegate();
+        // 注册事件
+        mRecyclerView.addOnItemTouchListener(IndexItemClickListener.create(ecBottomDelegate));
     }
 
 
