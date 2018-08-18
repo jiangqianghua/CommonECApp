@@ -6,6 +6,7 @@ import com.facebook.stetho.Stetho;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.joanzapata.iconify.fonts.IoniconsModule;
+import com.jqh.generalec.example.event.TestEvent;
 import com.jqh.jqh.app.Jqh;
 import com.jqh.jqh.ec.icon.FontEcModule;
 import com.jqh.jqh.ec.launcher.database.DataBaseManager;
@@ -26,6 +27,9 @@ public class ExampleApp extends Application {
                 .widthInterceptor(new DebugInterceptor("shops",R.raw.shop))
                 .widthInterceptor(new DebugInterceptor("sortlist",R.raw.sort_list))
                 .widthInterceptor(new DebugInterceptor("sortcontent",R.raw.sort_content))
+                .withJavascriptInterface("Jqh")
+                // 注册js调用的事件
+                .widthWebEvent("test", new TestEvent())
                 .widthWeChatAppId("wx7d10f050b6bdbda3")
                 .widthWeChatAppSecret("222")
                 .configure();

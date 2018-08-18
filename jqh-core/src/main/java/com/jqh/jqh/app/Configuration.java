@@ -1,7 +1,13 @@
 package com.jqh.jqh.app;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Handler;
+
+import com.jqh.jqh.deletegates.web.event.Event;
+import com.jqh.jqh.deletegates.web.event.EventManager;
+
+import org.greenrobot.greendao.annotation.NotNull;
 
 import java.util.ArrayList;
 import java.util.WeakHashMap;
@@ -66,6 +72,16 @@ public class Configuration {
     public final Configuration widthActivity(Activity activity){
         JQH_CONFIGS.put(ConfigType.ACTIVITY.name(),activity);
         return this;
+    }
+    public final Configuration withJavascriptInterface(@NotNull String name){
+        JQH_CONFIGS.put(ConfigType.JAVASCRIPT_INTERFACE.name(),name);
+        return this ;
+    }
+
+    public final Configuration widthWebEvent(@NotNull String name, @NotNull Event event){
+        final EventManager manager = EventManager.getInstance();
+        manager.addEvent(name, event);
+        return this ;
     }
 
     private void checkConfiguration(){

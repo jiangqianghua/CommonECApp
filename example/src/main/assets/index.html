@@ -1,0 +1,19 @@
+<html>
+<body>
+<a href="second.html">跳转</a>
+<button id="test">test btn</button>
+<script type="text/javascript">
+    document.getElementById("test").onclick = function(){
+        var command = {
+            'action':'test'
+        }
+        Jqh.event(JSON.stringify(command));
+    }
+
+    //  java 调用，必须是全局的
+    function nativeCall(){
+        alert("java call ...");
+    }
+</script>
+</body>
+</html>
