@@ -27,6 +27,8 @@ public class ExampleApp extends Application {
                 .widthInterceptor(new DebugInterceptor("shops",R.raw.shop))
                 .widthInterceptor(new DebugInterceptor("sortlist",R.raw.sort_list))
                 .widthInterceptor(new DebugInterceptor("sortcontent",R.raw.sort_content))
+                .widthInterceptor(new DebugInterceptor("shopcartdata",R.raw.shop_cart_data))
+                .widthInterceptor(new DebugInterceptor("shopcartcount",R.raw.shop_cart_count))
                 .withJavascriptInterface("Jqh")
                 // 注册js调用的事件
                 .widthWebEvent("test", new TestEvent())

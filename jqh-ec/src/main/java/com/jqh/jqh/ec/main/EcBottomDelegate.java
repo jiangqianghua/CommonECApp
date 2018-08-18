@@ -6,6 +6,7 @@ import com.jqh.jqh.bottom.BaseBottomDelegate;
 import com.jqh.jqh.bottom.BottomItemDelegate;
 import com.jqh.jqh.bottom.BottomTabBean;
 import com.jqh.jqh.bottom.ItemBuilder;
+import com.jqh.jqh.ec.main.cart.ShopCartDelegate;
 import com.jqh.jqh.ec.main.discover.DiscoverDelegate;
 import com.jqh.jqh.ec.main.index.IndexDelegate;
 import com.jqh.jqh.ec.main.sort.SortDelegate;
@@ -23,7 +24,7 @@ public class EcBottomDelegate extends BaseBottomDelegate {
         items.put(new BottomTabBean("{fa-home}","主页"),new IndexDelegate());
         items.put(new BottomTabBean("{fa-sort}","分类"),new SortDelegate());
         items.put(new BottomTabBean("{fa-compass}","发现"),new DiscoverDelegate());
-        items.put(new BottomTabBean("{fa-shopping-cart}","购物车"),new IndexDelegate());
+        items.put(new BottomTabBean("{fa-shopping-cart}","购物车"),new ShopCartDelegate());
         items.put(new BottomTabBean("{fa-user}","我的"),new IndexDelegate());
         return builder.addItems(items).build();
     }
