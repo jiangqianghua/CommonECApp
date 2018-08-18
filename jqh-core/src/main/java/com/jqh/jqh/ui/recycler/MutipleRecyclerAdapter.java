@@ -31,7 +31,7 @@ implements BaseQuickAdapter.SpanSizeLookup,OnItemClickListener{
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .dontAnimate();
 
-    protected MutipleRecyclerAdapter(List<MultipleItemEntity> data) {
+    public MutipleRecyclerAdapter(List<MultipleItemEntity> data) {
         super(data);
         init();
     }

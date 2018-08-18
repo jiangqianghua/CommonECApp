@@ -24,6 +24,8 @@ public class ExampleApp extends Application {
                 // 设置拦截器，模拟http访问数据
                 .widthInterceptor(new DebugInterceptor("index",R.raw.signin))
                 .widthInterceptor(new DebugInterceptor("shops",R.raw.shop))
+                .widthInterceptor(new DebugInterceptor("sortlist",R.raw.sort_list))
+                .widthInterceptor(new DebugInterceptor("sortcontent",R.raw.sort_content))
                 .widthWeChatAppId("wx7d10f050b6bdbda3")
                 .widthWeChatAppSecret("222")
                 .configure();
