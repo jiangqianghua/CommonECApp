@@ -2,6 +2,7 @@ package com.jqh.jqh.ec.main.sort;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.jqh.jqh.bottom.BottomItemDelegate;
@@ -29,4 +30,9 @@ public class SortDelegate extends BottomItemDelegate {
         getSupportDelegate().loadRootFragment(R.id.sort_content_container, ContentDeleagte.newInstance(1),false,false);
 
     }
+
+//    @Override
+//    public boolean onKey(View view, int i, KeyEvent keyEvent) {
+//        return false;
+//    }
 }
