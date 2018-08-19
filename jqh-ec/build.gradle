@@ -26,4 +26,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':jqh-core')
     compile files('libs/alipaySdk-20161222.jar')
+    //圆形图片
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }

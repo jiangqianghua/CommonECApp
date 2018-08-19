@@ -12,7 +12,7 @@ import javax.lang.model.type.TypeMirror;
 import javax.lang.model.util.SimpleAnnotationValueVisitor7;
 
 /**
- * Created by 傅令杰 on 2017/4/22
+ * Created by on 2017/4/22
  */
 final class AppRegisterVisitor extends SimpleAnnotationValueVisitor7<Void, Void> {
 
@@ -44,7 +44,7 @@ final class AppRegisterVisitor extends SimpleAnnotationValueVisitor7<Void, Void>
                         .build();
 
         final JavaFile javaFile = JavaFile.builder(mPackageName + ".wxapi", targetActivity)
-                .addFileComment("微信广播接收器")
+                .addFileComment("weixin guan bo jie shou qi")
                 .build();
         try {
             javaFile.writeTo(FILER);

@@ -2,6 +2,7 @@ package com.jqh.generalec.example;
 
 import android.app.Application;
 
+import com.blankj.utilcode.util.Utils;
 import com.facebook.stetho.Stetho;
 import com.joanzapata.iconify.Iconify;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
@@ -29,6 +30,9 @@ public class ExampleApp extends Application {
                 .widthInterceptor(new DebugInterceptor("sortcontent",R.raw.sort_content))
                 .widthInterceptor(new DebugInterceptor("shopcartdata",R.raw.shop_cart_data))
                 .widthInterceptor(new DebugInterceptor("shopcartcount",R.raw.shop_cart_count))
+                .widthInterceptor(new DebugInterceptor("orderlist",R.raw.order_list))
+                .widthInterceptor(new DebugInterceptor("address",R.raw.address))
+                .widthInterceptor(new DebugInterceptor("deleteaddress",R.raw.delete_address))
                 .withJavascriptInterface("Jqh")
                 // 注册js调用的事件
                 .widthWebEvent("test", new TestEvent())
@@ -41,6 +45,8 @@ public class ExampleApp extends Application {
         Iconify.with(new FontAwesomeModule())
                 .with(new IoniconsModule())
                 .with(new FontEcModule());
+        // 初始化工具包，第三方的
+        Utils.init(getApplicationContext());
     }
 
     private void initSteeho(){

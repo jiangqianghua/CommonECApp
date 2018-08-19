@@ -4,7 +4,8 @@
     <color name="holo_orange_light">#fdf6db28</color>
     <color name="holo_red_light">#fde72f13</color>
     <color name="app_backgroud">#1111</color>
-    <color name="holo_orange_dark">#fdf6db28</color>
+    <color name="holo_orange_dark">#ffff8800</color>
     <color name="we_chat_black">#323232</color>
     <color name="item_backgroud">#f1f1f1</color>
+    <color name="app_name">#323232</color>
 </resources>
