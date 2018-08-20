@@ -15,6 +15,7 @@ import com.joanzapata.iconify.widget.IconTextView;
 import com.jqh.jqh.bottom.BottomItemDelegate;
 import com.jqh.jqh.ec.R;
 import com.jqh.jqh.ec.main.EcBottomDelegate;
+import com.jqh.jqh.ec.main.index.search.SearchDelegate;
 import com.jqh.jqh.net.RestClient;
 import com.jqh.jqh.net.calback.ISuccess;
 import com.jqh.jqh.ui.recycler.BaseDecoration;
@@ -28,7 +29,7 @@ import java.util.ArrayList;
  * Created by jiangqianghua on 18/7/28.
  */
 
-public class IndexDelegate extends BottomItemDelegate {
+public class IndexDelegate extends BottomItemDelegate implements View.OnFocusChangeListener {
     RecyclerView mRecyclerView = null ;
     SwipeRefreshLayout mSwipeRefreshLayout =  null ;
     Toolbar mToolBar = null ;
@@ -51,7 +52,7 @@ public class IndexDelegate extends BottomItemDelegate {
         mIconScan = (IconTextView)rootView.findViewById(R.id.icon_index_scan);
         mSearchView = (AppCompatEditText)rootView.findViewById(R.id.et_search_view);
         mMessageView = (IconTextView)rootView.findViewById(R.id.icon_index_message);
-
+        mSearchView.setOnFocusChangeListener(this);
         refreshHandler = RefreshHandler.create(mSwipeRefreshLayout,mRecyclerView,new IndexDataConverter());
 
 //        RestClient.builder()
@@ -103,4 +104,10 @@ public class IndexDelegate extends BottomItemDelegate {
     }
 
 
+    @Override
+    public void onFocusChange(View view, boolean b) {
+        if (b) {
+            getParentDelegate().getSupportDelegate().start(new SearchDelegate());
+        }
+    }
 }

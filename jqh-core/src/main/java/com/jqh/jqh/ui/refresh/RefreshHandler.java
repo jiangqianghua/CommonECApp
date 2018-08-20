@@ -75,8 +75,36 @@ public class RefreshHandler implements SwipeRefreshLayout.OnRefreshListener,Base
                 .get();
     }
 
+    private void pageing(final String url){
+        final int pageSize  = BEAN.getmPageSize();
+        final int currentCount = BEAN.getmCurrentCount();
+        final int total = BEAN.getmTotal();
+        final int index = BEAN.getmPageIndex();
+
+        if(mAdapter.getData().size() < pageSize || currentCount >= total){
+            mAdapter.loadMoreEnd(true);
+        }else {
+            Jqh.getHandler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    RestClient.builder()
+                            .url(url) // url+ index
+                            .success(new ISuccess() {
+                                @Override
+                                public void onSuccess(String response) {
+                                    mAdapter.addData(CONVERTER.setJsonData(response).convert());
+                                    BEAN.setmCurrentCount(mAdapter.getData().size());
+                                    mAdapter.loadMoreComplete();
+                                    BEAN.addIndex();
+                                }
+                            }).build().get();
+                }
+            },1000);
+        }
+    }
+
     @Override
     public void onLoadMoreRequested() {
-
+        pageing("http://127.0.0.1/shops");
     }
 }
