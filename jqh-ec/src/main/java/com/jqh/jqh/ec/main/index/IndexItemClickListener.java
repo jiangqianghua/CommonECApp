@@ -6,6 +6,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.SimpleClickListener;
 import com.jqh.jqh.deletegates.JqhDelegate;
 import com.jqh.jqh.ec.detail.GoodsDetailDelegate;
+import com.jqh.jqh.ui.recycler.MultipleFields;
+import com.jqh.jqh.ui.recycler.MultipleItemEntity;
 
 public class IndexItemClickListener extends SimpleClickListener {
     private final JqhDelegate DELEGATE ;
@@ -18,7 +20,9 @@ public class IndexItemClickListener extends SimpleClickListener {
     }
     @Override
     public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-         final GoodsDetailDelegate delegate = GoodsDetailDelegate.create();
+        final MultipleItemEntity entity = (MultipleItemEntity) baseQuickAdapter.getData().get(position);
+        final int goodsId = entity.getField(MultipleFields.ID);
+         final GoodsDetailDelegate delegate = GoodsDetailDelegate.create(goodsId);
          DELEGATE.start(delegate);
     }
 

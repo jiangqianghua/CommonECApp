@@ -33,6 +33,7 @@ public class ExampleApp extends Application {
                 .widthInterceptor(new DebugInterceptor("orderlist",R.raw.order_list))
                 .widthInterceptor(new DebugInterceptor("address",R.raw.address))
                 .widthInterceptor(new DebugInterceptor("deleteaddress",R.raw.delete_address))
+                .widthInterceptor(new DebugInterceptor("goodsdetail",R.raw.goods_detial))
                 .withJavascriptInterface("Jqh")
                 // 注册js调用的事件
                 .widthWebEvent("test", new TestEvent())

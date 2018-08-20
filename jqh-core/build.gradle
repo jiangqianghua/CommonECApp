@@ -53,6 +53,8 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     // 轮播图
     compile 'com.bigkoo:convenientbanner:2.0.5'
+    compile 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:1.2.32@aar'
+
     compile 'com.alibaba:fastjson:1.2.31'
    // compile 'com.alibaba:fastjson:1.1.57.android'
 

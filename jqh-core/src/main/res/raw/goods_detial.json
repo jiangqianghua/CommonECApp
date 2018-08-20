@@ -1,0 +1,37 @@
+{
+  "code":0,
+  "message":"ok",
+  "data":{
+    "content":"内容描述",
+    "banners":[
+      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805584&di=9192536aa22a484c27ea2bf8cf2f4409&imgtype=0&src=http%3A%2F%2Fimage1.suning.cn%2Fb2c%2Fcatentries%2F000000000127224354_4_800x800.jpg",
+      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805584&di=8c854b19dd2e49cffe892bad0219f8cc&imgtype=0&src=http%3A%2F%2Fwww.cfw.cn%2Feditors%2Fattached%2Fimage%2F20150407%2F20150407102781118111.jpg",
+      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805584&di=53a36acef410e6019092edbf054b00cd&imgtype=0&src=http%3A%2F%2Fimage.rakuten.co.jp%2Fbemagical%2Fcabinet%2Fitem3%2F0514201517031205m.jpg"
+    ],
+    "tabs":[
+      {
+        "name":"商品详情1",
+        "pictures":[
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805583&di=a73bf2e2872f47f3c37b7580bdcc4910&imgtype=0&src=http%3A%2F%2Fimages.onccc.com%2Fi003%2F2014%2F03%2F26%2F64%2Fbig_1f184025b4348d2b933ea4a11c249e9d.jpg",
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805582&di=77ad3838f54164cbb0399032ef50e238&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201608%2F22%2F20160822010225_2zinH.jpeg",
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805581&di=568f64b393a64f075bf8d5bf4a769795&imgtype=0&src=http%3A%2F%2Fimg010.hc360.cn%2Fy4%2FM01%2F03%2FA8%2FwKhQiFVQ2viEQKAjAAAAAAac6oU459.jpg"
+        ]
+      },
+      {
+        "name":"商品详情2",
+        "pictures":[
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805581&di=e1128e580e6d8548ec0ba9bf45f21aec&imgtype=0&src=http%3A%2F%2Fimg14.360buyimg.com%2Fimgzone%2Fjfs%2Ft2878%2F239%2F734915081%2F101702%2Ffd99a675%2F57244ae3N7035247f.jpg",
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805581&di=a16cdd8e2c7b7373eacbf2defb09fc79&imgtype=0&src=http%3A%2F%2Fimg12.360buyimg.com%2FpopWaterMark%2Fjfs%2Ft1051%2F358%2F855045561%2F96247%2Fb2848a53%2F55645eb6N8931c33e.jpg",
+          "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534704805581&di=3e39ec9fcc9ffb4ddf47ca0102143c87&imgtype=0&src=http%3A%2F%2Fimg1.yiwugou.com%2Fi004%2F2016%2F05%2F23%2F00%2Fc769f9e959b215e1dc8c6daf9e768201.jpg%401024w_1024h.jpg"
+        ]
+      }
+    ],
+    "specification":"规格参数",
+    "inventory":"商品中包含了哪些清单",
+    "id":1,
+    "name":"小米5s 3GB+64GB 金色",
+    "description":"搭载高晓通 八核高性能处理器",
+    "price":12.00,
+    "thumb":"https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2961896172,2942351692&fm=27&gp=0.jpg"
+  }
+}
