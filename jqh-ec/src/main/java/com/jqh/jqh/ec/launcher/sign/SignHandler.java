@@ -15,7 +15,7 @@ public class SignHandler {
 
     public static void signIn(String response,ISignListener iSignListener){
         try {
-            saveData(response);
+            // saveData(response);
             AccountManager.setSignState(true);
             iSignListener.onSignInSuccess();
         }catch (Exception e){

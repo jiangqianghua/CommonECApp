@@ -62,7 +62,7 @@ public class SignInDelegate extends JqhDelegate {
                             .success(new ISuccess() {
                                 @Override
                                 public void onSuccess(String response) {
-                                    SignHandler.signIn(response,null);
+                                    SignHandler.signIn(response,mISignListener);
                                 }
                             }).build()
                             .post();
